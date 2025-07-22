@@ -29,15 +29,19 @@ export class MainComponent {
   this.showPassword = !this.showPassword;
 }
   
-  onSubmit(){
-    if(this.loginForm.invalid){
-      return;
+  onSubmit() {
+  if (this.loginForm.valid) {
+    const email = this.loginForm.value.email;
+    const password = this.loginForm.value.password;
+
+    // Example logic — replace with your actual authentication call
+    if (email === 'admin@example.com' && password === 'password123') {
+      // Redirect to functionalityPage
+      this.router.navigate(['/functionalityPage']);
+    } else {
+      // Handle invalid credentials
+      alert('Invalid email or password');
     }
-
-    this.isSubmitting = true;
-    const credentials =this.loginForm.value;
-
-
   }
-
+}
 }
