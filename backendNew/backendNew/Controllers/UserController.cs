@@ -28,21 +28,15 @@ namespace backendNew.Controllers
         [HttpPost]
         public async Task<IActionResult> CreateUser([FromBody] User user)
         {
-            // Optional: validate model
-            if (!ModelState.IsValid)
-                return BadRequest(ModelState);
+            if (!ModelState.IsValid) return BadRequest(ModelState);
 
             try
             {
-                // Use your repo method if available, otherwise directly apply same logic
-                if (string.IsNullOrWhiteSpace(user.Role))
-                {
-                    user.Role = "User";
-                }
-
                 var allowedRoles = new[] { "User", "Admin", "SubAdmin" };
-                if (!allowedRoles.Contains(user.Role))
-                    return BadRequest("Invalid role specified.");
+                if (string.IsNullOrWhiteSpace(user.Role)) user.Role = "User";
+                if (!allowedRoles.Contains(user.Role)) return BadRequest("Invalid role specified.");
+
+                user.Password = BCrypt.Net.BCrypt.HashPassword(user.Password);
 
                 _context.Users.Add(user);
                 await _context.SaveChangesAsync();

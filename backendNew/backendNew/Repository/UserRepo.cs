@@ -1,5 +1,6 @@
 ﻿using System.Data.Entity;
 using AutoMapper;
+using BCrypt.Net;
 using backendNew.DataAccessLayer;
 using backendNew.Model;
 using Microsoft.EntityFrameworkCore;
@@ -14,27 +15,27 @@ namespace backendNew.Repository
         public UserRepo(AppDbContext appDbContext)
         {
             this.appDbContext = appDbContext;
-   
+
         }
 
-        public async Task<User> CreateUserAsync(User user)
-        {
-            // Ensure role is valid; default to "User" if not provided
-            var allowedRoles = new[] { "User", "Admin", "SubAdmin" };
+        //        public async Task<User> CreateUserAsync(User user)
+        //        {
+        //            // Ensure role is valid; default to "User" if not provided
+        //            var allowedRoles = new[] { "User", "Admin", "SubAdmin" };
 
-            if (string.IsNullOrWhiteSpace(user.Role))
-            {
-                user.Role = "User";
-            }
-            else if (!allowedRoles.Contains(user.Role))
-            {
-                throw new ArgumentException("Invalid role specified.");
-            }
+        //            if (string.IsNullOrWhiteSpace(user.Role))
+        //            {
+        //                user.Role = "User";
+        //            }
+        //            else if (!allowedRoles.Contains(user.Role))
+        //            {
+        //                throw new ArgumentException("Invalid role specified.");
+        //            }
 
-            appDbContext.Users.Add(user);
-            await appDbContext.SaveChangesAsync();
-            return user;
-        }
+        //            appDbContext.Users.Add(user);
+        //            await appDbContext.SaveChangesAsync();
+        //            return user;
+        //        }
 
         public async Task<bool> DeleteUserAsync(User user)
         {
@@ -58,25 +59,59 @@ namespace backendNew.Repository
                 Name = u.Name,
                 Email = u.Email,
                 Role = u.Role
-                
+
             }).ToList();
 
             return safeUsers;
         }
+        //        public async Task<User> UpdateUserAsync(User user)
+        //        {
+        //            var existingUser = await appDbContext.Users.FindAsync(user.Id);
+
+        //            if (existingUser == null)
+        //                return null;
+
+        //            existingUser.Name = user.Name;
+        //            existingUser.Email = user.Email;
+        //            existingUser.Password = user.Password; 
+        //            existingUser.Role = user.Role; 
+
+        //            await appDbContext.SaveChangesAsync();
+        //            return existingUser;
+        //        }
+        //    }
+        //}
+
+        public async Task<User> CreateUserAsync(User user)
+        {
+            var allowedRoles = new[] { "User", "Admin", "SubAdmin" };
+            if (string.IsNullOrWhiteSpace(user.Role)) user.Role = "User";
+            else if (!allowedRoles.Contains(user.Role)) throw new ArgumentException("Invalid role specified.");
+
+            user.Password = BCrypt.Net.BCrypt.HashPassword(user.Password);
+
+            appDbContext.Users.Add(user);
+            await appDbContext.SaveChangesAsync();
+            return user;
+        }
+
         public async Task<User> UpdateUserAsync(User user)
         {
             var existingUser = await appDbContext.Users.FindAsync(user.Id);
-
-            if (existingUser == null)
-                return null;
+            if (existingUser == null) return null;
 
             existingUser.Name = user.Name;
             existingUser.Email = user.Email;
-            existingUser.Password = user.Password; 
-            existingUser.Role = user.Role; 
+            existingUser.Role = user.Role;
+
+            if (!string.IsNullOrWhiteSpace(user.Password))
+            {
+                existingUser.Password = BCrypt.Net.BCrypt.HashPassword(user.Password);
+            }
 
             await appDbContext.SaveChangesAsync();
             return existingUser;
         }
+
     }
 }

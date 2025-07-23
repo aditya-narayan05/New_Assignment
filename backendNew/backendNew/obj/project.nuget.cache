@@ -1,12 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "kI+prW9sQIY=",
+  "dgSpecHash": "a+l2famgzoo=",
   "success": true,
   "projectFilePath": "C:\\Users\\Aditya.Singh7\\Desktop\\New_Assignment\\backendNew\\backendNew\\backendNew.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Aditya.Singh7\\.nuget\\packages\\automapper\\15.0.1\\automapper.15.0.1.nupkg.sha512",
     "C:\\Users\\Aditya.Singh7\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\Aditya.Singh7\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",
+    "C:\\Users\\Aditya.Singh7\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
     "C:\\Users\\Aditya.Singh7\\.nuget\\packages\\entityframework\\6.5.1\\entityframework.6.5.1.nupkg.sha512",
     "C:\\Users\\Aditya.Singh7\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\Aditya.Singh7\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\8.0.0\\microsoft.aspnetcore.authentication.jwtbearer.8.0.0.nupkg.sha512",

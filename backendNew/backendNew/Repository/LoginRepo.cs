@@ -4,7 +4,7 @@ using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
-
+using BCrypt.Net;
 public class LoginRepo : ILogin
 {
     private readonly AppDbContext _context;
@@ -18,10 +18,8 @@ public class LoginRepo : ILogin
 
     public async Task<string?> AuthenticateAsync(LoginDTO loginDto)
     {
-        var user = _context.Users.FirstOrDefault(u =>
-            u.Email == loginDto.Email && u.Password == loginDto.Password);
-
-        if (user == null) return null;
+        var user = _context.Users.FirstOrDefault(u => u.Email == loginDto.Email);
+        if (user == null || !BCrypt.Net.BCrypt.Verify(loginDto.Password, user.Password)) return null;
 
         var claims = new[]
         {
@@ -35,7 +33,6 @@ public class LoginRepo : ILogin
         );
 
         var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
-
         var token = new JwtSecurityToken(
             issuer: _configuration["Jwt:Issuer"],
             audience: _configuration["Jwt:Audience"],

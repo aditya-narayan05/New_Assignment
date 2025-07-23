@@ -181,3 +181,4 @@ C:\Users\Aditya.Singh7\Desktop\New_Assignment\backendNew\backendNew\bin\Debug\ne
 C:\Users\Aditya.Singh7\Desktop\New_Assignment\backendNew\backendNew\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
 C:\Users\Aditya.Singh7\Desktop\New_Assignment\backendNew\backendNew\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
 C:\Users\Aditya.Singh7\Desktop\New_Assignment\backendNew\backendNew\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:\Users\Aditya.Singh7\Desktop\New_Assignment\backendNew\backendNew\bin\Debug\net8.0\BCrypt.Net-Next.dll
