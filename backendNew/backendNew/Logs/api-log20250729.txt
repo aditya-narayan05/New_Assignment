@@ -1,0 +1,293 @@
+2025-07-29 13:02:00.561 +05:30 [INF] Executed DbCommand (541ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Items] AS [i]
+2025-07-29 13:02:02.475 +05:30 [INF] User profile is available. Using 'C:\Users\Aditya.Singh7\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-07-29 13:02:04.474 +05:30 [INF] Now listening on: https://localhost:7261
+2025-07-29 13:02:04.476 +05:30 [INF] Now listening on: http://localhost:5281
+2025-07-29 13:02:09.479 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7261/swagger/index.html - null null
+2025-07-29 13:02:12.510 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7261/swagger/index.html - 200 null text/html;charset=utf-8 3138.8568ms
+2025-07-29 13:02:13.042 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7261/_framework/aspnetcore-browser-refresh.js - null null
+2025-07-29 13:02:13.151 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7261/_framework/aspnetcore-browser-refresh.js - 200 13772 application/javascript; charset=utf-8 111.4073ms
+2025-07-29 13:02:13.243 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7261/_vs/browserLink - null null
+2025-07-29 13:02:13.654 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7261/_vs/browserLink - 200 null text/javascript; charset=UTF-8 418.6545ms
+2025-07-29 13:02:14.676 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7261/swagger/v1/swagger.json - null null
+2025-07-29 13:02:14.811 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7261/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 135.0538ms
+2025-07-29 13:02:22.976 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7261/api/User/2 - null null
+2025-07-29 13:02:23.069 +05:30 [INF] Executing endpoint 'backendNew.Controllers.UserController.GetUser (backendNew)'
+2025-07-29 13:02:23.297 +05:30 [INF] Route matched with {action = "GetUser", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetUser(Int32) on controller backendNew.Controllers.UserController (backendNew).
+2025-07-29 13:02:24.673 +05:30 [INF] Executed DbCommand (205ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[Name], [u].[Password], [u].[Role]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__p_0
+2025-07-29 13:02:24.979 +05:30 [INF] Executing OkObjectResult, writing value of type 'backendNew.Model.User'.
+2025-07-29 13:02:25.020 +05:30 [INF] Executed action backendNew.Controllers.UserController.GetUser (backendNew) in 1704.2491ms
+2025-07-29 13:02:25.022 +05:30 [INF] Executed endpoint 'backendNew.Controllers.UserController.GetUser (backendNew)'
+2025-07-29 13:02:25.046 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7261/api/User/2 - 200 null application/json; charset=utf-8 2070.0345ms
+2025-07-29 13:08:21.185 +05:30 [INF] Executed DbCommand (124ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Items] AS [i]
+2025-07-29 13:08:22.145 +05:30 [INF] User profile is available. Using 'C:\Users\Aditya.Singh7\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-07-29 13:08:23.214 +05:30 [INF] Now listening on: https://localhost:7261
+2025-07-29 13:08:23.216 +05:30 [INF] Now listening on: http://localhost:5281
+2025-07-29 13:08:28.333 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7261/swagger/index.html - null null
+2025-07-29 13:08:29.876 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7261/swagger/index.html - 200 null text/html;charset=utf-8 1611.4482ms
+2025-07-29 13:08:30.111 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7261/_framework/aspnetcore-browser-refresh.js - null null
+2025-07-29 13:08:30.162 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7261/_framework/aspnetcore-browser-refresh.js - 200 13772 application/javascript; charset=utf-8 51.2726ms
+2025-07-29 13:08:30.833 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7261/_vs/browserLink - null null
+2025-07-29 13:08:31.271 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7261/_vs/browserLink - 200 null text/javascript; charset=UTF-8 438.8634ms
+2025-07-29 13:08:31.900 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7261/swagger/v1/swagger.json - null null
+2025-07-29 13:08:32.268 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7261/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 368.6852ms
+2025-07-29 13:08:42.612 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7261/api/User/2 - null null
+2025-07-29 13:08:42.714 +05:30 [INF] Request: GET /api/User/2 | Body: 
+2025-07-29 13:08:42.741 +05:30 [INF] Executing endpoint 'backendNew.Controllers.UserController.GetUser (backendNew)'
+2025-07-29 13:08:42.879 +05:30 [INF] Route matched with {action = "GetUser", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetUser(Int32) on controller backendNew.Controllers.UserController (backendNew).
+2025-07-29 13:08:44.547 +05:30 [INF] Executed DbCommand (187ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[Name], [u].[Password], [u].[Role]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__p_0
+2025-07-29 13:08:44.925 +05:30 [INF] Executing OkObjectResult, writing value of type 'backendNew.Model.User'.
+2025-07-29 13:08:44.972 +05:30 [INF] Executed action backendNew.Controllers.UserController.GetUser (backendNew) in 2070.0502ms
+2025-07-29 13:08:44.977 +05:30 [INF] Executed endpoint 'backendNew.Controllers.UserController.GetUser (backendNew)'
+2025-07-29 13:08:44.980 +05:30 [INF] Response: 200 | Body: {"id":2,"name":"Adi","email":"adit@gmail.com","password":"adi1234","role":"User"}
+2025-07-29 13:08:45.014 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7261/api/User/2 - 200 null application/json; charset=utf-8 2404.043ms
+2025-07-29 13:09:36.228 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7261/api/Test/validation-error?required=2134124 - null null
+2025-07-29 13:09:36.278 +05:30 [INF] Request: GET /api/Test/validation-error | Body: 
+2025-07-29 13:09:36.279 +05:30 [INF] Executing endpoint 'backendNew.Controllers.TestController.ValidationError (backendNew)'
+2025-07-29 13:09:36.294 +05:30 [INF] Route matched with {action = "ValidationError", controller = "Test"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult ValidationError(System.String) on controller backendNew.Controllers.TestController (backendNew).
+2025-07-29 13:09:36.391 +05:30 [INF] Executing StatusCodeResult, setting HTTP status code 200
+2025-07-29 13:09:36.393 +05:30 [INF] Executed action backendNew.Controllers.TestController.ValidationError (backendNew) in 98.6572ms
+2025-07-29 13:09:36.394 +05:30 [INF] Executed endpoint 'backendNew.Controllers.TestController.ValidationError (backendNew)'
+2025-07-29 13:09:36.395 +05:30 [INF] Response: 200 | Body: 
+2025-07-29 13:09:36.396 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7261/api/Test/validation-error?required=2134124 - 200 0 null 168.0583ms
+2025-07-29 13:09:45.829 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7261/api/Test/validation-error?required=adi - null null
+2025-07-29 13:09:45.834 +05:30 [INF] Request: GET /api/Test/validation-error | Body: 
+2025-07-29 13:09:45.835 +05:30 [INF] Executing endpoint 'backendNew.Controllers.TestController.ValidationError (backendNew)'
+2025-07-29 13:09:45.836 +05:30 [INF] Route matched with {action = "ValidationError", controller = "Test"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult ValidationError(System.String) on controller backendNew.Controllers.TestController (backendNew).
+2025-07-29 13:09:45.840 +05:30 [INF] Executing StatusCodeResult, setting HTTP status code 200
+2025-07-29 13:09:45.841 +05:30 [INF] Executed action backendNew.Controllers.TestController.ValidationError (backendNew) in 4.2555ms
+2025-07-29 13:09:45.842 +05:30 [INF] Executed endpoint 'backendNew.Controllers.TestController.ValidationError (backendNew)'
+2025-07-29 13:09:45.842 +05:30 [INF] Response: 200 | Body: 
+2025-07-29 13:09:45.843 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7261/api/Test/validation-error?required=adi - 200 0 null 14.6487ms
+2025-07-29 13:09:56.559 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7261/api/Test/unhandled-error - null null
+2025-07-29 13:09:56.561 +05:30 [INF] Request: GET /api/Test/unhandled-error | Body: 
+2025-07-29 13:09:56.561 +05:30 [INF] Executing endpoint 'backendNew.Controllers.TestController.UnhandledException (backendNew)'
+2025-07-29 13:09:56.563 +05:30 [INF] Route matched with {action = "UnhandledException", controller = "Test"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult UnhandledException() on controller backendNew.Controllers.TestController (backendNew).
+2025-07-29 13:10:07.083 +05:30 [INF] Executed action backendNew.Controllers.TestController.UnhandledException (backendNew) in 10519.1954ms
+2025-07-29 13:10:07.088 +05:30 [INF] Executed endpoint 'backendNew.Controllers.TestController.UnhandledException (backendNew)'
+2025-07-29 13:10:07.219 +05:30 [ERR] Unhandled Exception: This is an unhandled exception
+System.InvalidOperationException: This is an unhandled exception
+   at backendNew.Controllers.TestController.UnhandledException() in C:\Users\Aditya.Singh7\Desktop\New_Assignment\backendNew\backendNew\Controllers\TestController.cs:line 26
+   at lambda_method59(Closure, Object, Object[])
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at backendNew.NewMiddleware.ApiLoggingMiddleware.Invoke(HttpContext context) in C:\Users\Aditya.Singh7\Desktop\New_Assignment\backendNew\backendNew\NewMiddleware\ApiLoggingMiddleware.cs:line 29
+   at backendNew.NewMiddleware.ExceptionLoggingMiddleware.Invoke(HttpContext context) in C:\Users\Aditya.Singh7\Desktop\New_Assignment\backendNew\backendNew\NewMiddleware\ExceptionLoggingMiddleware.cs:line 18
+2025-07-29 13:10:07.430 +05:30 [ERR] An unhandled exception has occurred while executing the request.
+System.ObjectDisposedException: Cannot access a closed Stream.
+   at System.IO.MemoryStream.Write(Byte[] buffer, Int32 offset, Int32 count)
+   at System.IO.MemoryStream.WriteAsync(ReadOnlyMemory`1 buffer, CancellationToken cancellationToken)
+--- End of stack trace from previous location ---
+   at System.Text.Json.PooledByteBufferWriter.FlushAsync(CancellationToken cancellationToken)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.SerializeAsync(PipeWriter pipeWriter, T rootValue, Int32 flushThreshold, CancellationToken cancellationToken, Object rootValueBoxed)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.SerializeAsync(PipeWriter pipeWriter, T rootValue, Int32 flushThreshold, CancellationToken cancellationToken, Object rootValueBoxed)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.SerializeAsync(PipeWriter pipeWriter, T rootValue, Int32 flushThreshold, CancellationToken cancellationToken, Object rootValueBoxed)
+   at Microsoft.AspNetCore.Http.HttpResponseJsonExtensions.WriteAsJsonAsyncSlow[TValue](Stream body, TValue value, JsonSerializerOptions options, CancellationToken cancellationToken)
+   at backendNew.NewMiddleware.ExceptionLoggingMiddleware.Invoke(HttpContext context) in C:\Users\Aditya.Singh7\Desktop\New_Assignment\backendNew\backendNew\NewMiddleware\ExceptionLoggingMiddleware.cs:line 27
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-07-29 13:10:07.457 +05:30 [ERR] An exception was thrown attempting to display the error page.
+System.ObjectDisposedException: Cannot access a closed Stream.
+   at System.IO.MemoryStream.Write(Byte[] buffer, Int32 offset, Int32 count)
+   at System.IO.MemoryStream.WriteAsync(ReadOnlyMemory`1 buffer, CancellationToken cancellationToken)
+--- End of stack trace from previous location ---
+   at System.IO.Pipelines.StreamPipeWriter.FlushAsyncInternal(Boolean writeToStream, ReadOnlyMemory`1 data, CancellationToken cancellationToken)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at System.Threading.Tasks.ValueTask`1.GetTaskForValueTaskSource(IValueTaskSource`1 t)
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.DisplayExceptionContent(ErrorContext errorContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-07-29 13:10:07.464 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7261/api/Test/unhandled-error - 500 0 null 10907.15ms
+2025-07-29 13:27:44.021 +05:30 [INF] Executed DbCommand (192ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Items] AS [i]
+2025-07-29 13:27:44.818 +05:30 [INF] User profile is available. Using 'C:\Users\Aditya.Singh7\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-07-29 13:27:45.685 +05:30 [INF] Now listening on: https://localhost:7261
+2025-07-29 13:27:45.688 +05:30 [INF] Now listening on: http://localhost:5281
+2025-07-29 13:27:46.308 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-07-29 13:27:46.311 +05:30 [INF] Hosting environment: Development
+2025-07-29 13:27:46.311 +05:30 [INF] Content root path: C:\Users\Aditya.Singh7\Desktop\New_Assignment\backendNew\backendNew
+2025-07-29 13:27:49.079 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7261/swagger/index.html - null null
+2025-07-29 13:27:50.751 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7261/swagger/index.html - 200 null text/html;charset=utf-8 1705.1966ms
+2025-07-29 13:27:51.290 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7261/_framework/aspnetcore-browser-refresh.js - null null
+2025-07-29 13:27:51.315 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7261/_framework/aspnetcore-browser-refresh.js - 200 13772 application/javascript; charset=utf-8 24.6799ms
+2025-07-29 13:27:51.532 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7261/_vs/browserLink - null null
+2025-07-29 13:27:51.735 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7261/_vs/browserLink - 200 null text/javascript; charset=UTF-8 203.0736ms
+2025-07-29 13:27:52.308 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7261/swagger/v1/swagger.json - null null
+2025-07-29 13:27:52.400 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7261/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 101.8476ms
+2025-07-29 13:28:00.479 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7261/api/User/2 - null null
+2025-07-29 13:28:00.569 +05:30 [INF] Request: GET /api/User/2 | Body: 
+2025-07-29 13:28:00.581 +05:30 [INF] Executing endpoint 'backendNew.Controllers.UserController.GetUser (backendNew)'
+2025-07-29 13:28:00.716 +05:30 [INF] Route matched with {action = "GetUser", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetUser(Int32) on controller backendNew.Controllers.UserController (backendNew).
+2025-07-29 13:28:01.548 +05:30 [INF] Executed DbCommand (144ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[Name], [u].[Password], [u].[Role]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__p_0
+2025-07-29 13:28:01.878 +05:30 [INF] Executing OkObjectResult, writing value of type 'backendNew.Model.User'.
+2025-07-29 13:28:01.920 +05:30 [INF] Executed action backendNew.Controllers.UserController.GetUser (backendNew) in 1193.2275ms
+2025-07-29 13:28:01.924 +05:30 [INF] Executed endpoint 'backendNew.Controllers.UserController.GetUser (backendNew)'
+2025-07-29 13:28:01.926 +05:30 [INF] Response: 200 | Body: {"id":2,"name":"Adi","email":"adit@gmail.com","password":"adi1234","role":"User"}
+2025-07-29 13:28:01.949 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7261/api/User/2 - 200 null application/json; charset=utf-8 1470.7054ms
+2025-07-29 13:28:31.290 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7261/api/User - application/json 98
+2025-07-29 13:28:31.311 +05:30 [INF] CORS policy execution successful.
+2025-07-29 13:28:31.315 +05:30 [INF] CORS policy execution successful.
+2025-07-29 13:28:31.319 +05:30 [INF] Request: POST /api/User | Body: {
+  "id": 0,
+  "name": "string",
+  "email": "string",
+  "password": "string",
+  "role": "string"
+}
+2025-07-29 13:28:31.321 +05:30 [INF] Executing endpoint 'backendNew.Controllers.UserController.CreateUser (backendNew)'
+2025-07-29 13:28:31.341 +05:30 [INF] Route matched with {action = "CreateUser", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateUser(backendNew.Model.User) on controller backendNew.Controllers.UserController (backendNew).
+2025-07-29 13:28:31.630 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+2025-07-29 13:28:31.632 +05:30 [INF] Executed action backendNew.Controllers.UserController.CreateUser (backendNew) in 289.7791ms
+2025-07-29 13:28:31.632 +05:30 [INF] Executed endpoint 'backendNew.Controllers.UserController.CreateUser (backendNew)'
+2025-07-29 13:28:31.632 +05:30 [INF] Response: 400 | Body: Invalid role specified.
+2025-07-29 13:28:31.635 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7261/api/User - 400 null text/plain; charset=utf-8 344.9314ms
+2025-07-29 13:29:19.205 +05:30 [INF] Executed DbCommand (85ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Items] AS [i]
+2025-07-29 13:29:20.115 +05:30 [INF] User profile is available. Using 'C:\Users\Aditya.Singh7\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-07-29 13:29:21.101 +05:30 [INF] Now listening on: https://localhost:7261
+2025-07-29 13:29:21.103 +05:30 [INF] Now listening on: http://localhost:5281
+2025-07-29 13:29:21.510 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-07-29 13:29:21.513 +05:30 [INF] Hosting environment: Development
+2025-07-29 13:29:21.513 +05:30 [INF] Content root path: C:\Users\Aditya.Singh7\Desktop\New_Assignment\backendNew\backendNew
+2025-07-29 13:29:24.781 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7261/swagger/index.html - null null
+2025-07-29 13:29:27.079 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7261/swagger/index.html - 200 null text/html;charset=utf-8 2329.7026ms
+2025-07-29 13:29:27.716 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7261/_framework/aspnetcore-browser-refresh.js - null null
+2025-07-29 13:29:27.743 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7261/_framework/aspnetcore-browser-refresh.js - 200 13772 application/javascript; charset=utf-8 26.839ms
+2025-07-29 13:29:28.031 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7261/_vs/browserLink - null null
+2025-07-29 13:29:28.191 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7261/_vs/browserLink - 200 null text/javascript; charset=UTF-8 160.1075ms
+2025-07-29 13:29:28.678 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7261/swagger/v1/swagger.json - null null
+2025-07-29 13:29:28.791 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7261/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 114.4013ms
+2025-07-29 13:29:34.237 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7261/api/Test/unhandled-error - null null
+2025-07-29 13:29:34.347 +05:30 [INF] Request: GET /api/Test/unhandled-error | Body: 
+2025-07-29 13:29:34.361 +05:30 [INF] Executing endpoint 'backendNew.Controllers.TestController.UnhandledException (backendNew)'
+2025-07-29 13:29:34.434 +05:30 [INF] Route matched with {action = "UnhandledException", controller = "Test"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult UnhandledException() on controller backendNew.Controllers.TestController (backendNew).
+2025-07-29 13:29:42.328 +05:30 [INF] Executed action backendNew.Controllers.TestController.UnhandledException (backendNew) in 7876.4066ms
+2025-07-29 13:29:42.331 +05:30 [INF] Executed endpoint 'backendNew.Controllers.TestController.UnhandledException (backendNew)'
+2025-07-29 13:29:42.427 +05:30 [ERR] Unhandled Exception: This is an unhandled exception
+System.InvalidOperationException: This is an unhandled exception
+   at backendNew.Controllers.TestController.UnhandledException() in C:\Users\Aditya.Singh7\Desktop\New_Assignment\backendNew\backendNew\Controllers\TestController.cs:line 26
+   at lambda_method10(Closure, Object, Object[])
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at backendNew.NewMiddleware.ApiLoggingMiddleware.Invoke(HttpContext context) in C:\Users\Aditya.Singh7\Desktop\New_Assignment\backendNew\backendNew\NewMiddleware\ApiLoggingMiddleware.cs:line 29
+   at backendNew.NewMiddleware.ExceptionLoggingMiddleware.Invoke(HttpContext context) in C:\Users\Aditya.Singh7\Desktop\New_Assignment\backendNew\backendNew\NewMiddleware\ExceptionLoggingMiddleware.cs:line 18
+2025-07-29 13:29:42.566 +05:30 [ERR] An unhandled exception has occurred while executing the request.
+System.ObjectDisposedException: Cannot access a closed Stream.
+   at System.IO.MemoryStream.Write(Byte[] buffer, Int32 offset, Int32 count)
+   at System.IO.MemoryStream.WriteAsync(ReadOnlyMemory`1 buffer, CancellationToken cancellationToken)
+--- End of stack trace from previous location ---
+   at System.Text.Json.PooledByteBufferWriter.FlushAsync(CancellationToken cancellationToken)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.SerializeAsync(PipeWriter pipeWriter, T rootValue, Int32 flushThreshold, CancellationToken cancellationToken, Object rootValueBoxed)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.SerializeAsync(PipeWriter pipeWriter, T rootValue, Int32 flushThreshold, CancellationToken cancellationToken, Object rootValueBoxed)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.SerializeAsync(PipeWriter pipeWriter, T rootValue, Int32 flushThreshold, CancellationToken cancellationToken, Object rootValueBoxed)
+   at Microsoft.AspNetCore.Http.HttpResponseJsonExtensions.WriteAsJsonAsyncSlow[TValue](Stream body, TValue value, JsonSerializerOptions options, CancellationToken cancellationToken)
+   at backendNew.NewMiddleware.ExceptionLoggingMiddleware.Invoke(HttpContext context) in C:\Users\Aditya.Singh7\Desktop\New_Assignment\backendNew\backendNew\NewMiddleware\ExceptionLoggingMiddleware.cs:line 27
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-07-29 13:29:42.588 +05:30 [ERR] An exception was thrown attempting to display the error page.
+System.ObjectDisposedException: Cannot access a closed Stream.
+   at System.IO.MemoryStream.Write(Byte[] buffer, Int32 offset, Int32 count)
+   at System.IO.MemoryStream.WriteAsync(ReadOnlyMemory`1 buffer, CancellationToken cancellationToken)
+--- End of stack trace from previous location ---
+   at System.IO.Pipelines.StreamPipeWriter.FlushAsyncInternal(Boolean writeToStream, ReadOnlyMemory`1 data, CancellationToken cancellationToken)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at System.Threading.Tasks.ValueTask`1.GetTaskForValueTaskSource(IValueTaskSource`1 t)
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.DisplayExceptionContent(ErrorContext errorContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-07-29 13:29:42.603 +05:30 [ERR] Connection id "0HNEEEN9Q62HF", Request id "0HNEEEN9Q62HF:00000009": An unhandled exception was thrown by the application.
+System.ObjectDisposedException: Cannot access a closed Stream.
+   at System.IO.MemoryStream.Write(Byte[] buffer, Int32 offset, Int32 count)
+   at System.IO.MemoryStream.WriteAsync(ReadOnlyMemory`1 buffer, CancellationToken cancellationToken)
+--- End of stack trace from previous location ---
+   at System.Text.Json.PooledByteBufferWriter.FlushAsync(CancellationToken cancellationToken)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.SerializeAsync(PipeWriter pipeWriter, T rootValue, Int32 flushThreshold, CancellationToken cancellationToken, Object rootValueBoxed)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.SerializeAsync(PipeWriter pipeWriter, T rootValue, Int32 flushThreshold, CancellationToken cancellationToken, Object rootValueBoxed)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.SerializeAsync(PipeWriter pipeWriter, T rootValue, Int32 flushThreshold, CancellationToken cancellationToken, Object rootValueBoxed)
+   at Microsoft.AspNetCore.Http.HttpResponseJsonExtensions.WriteAsJsonAsyncSlow[TValue](Stream body, TValue value, JsonSerializerOptions options, CancellationToken cancellationToken)
+   at backendNew.NewMiddleware.ExceptionLoggingMiddleware.Invoke(HttpContext context) in C:\Users\Aditya.Singh7\Desktop\New_Assignment\backendNew\backendNew\NewMiddleware\ExceptionLoggingMiddleware.cs:line 27
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+   at Microsoft.WebTools.BrowserLink.Net.BrowserLinkMiddleware.InvokeAsync(HttpContext context)
+   at Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware.InvokeAsync(HttpContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequests[TContext](IHttpApplication`1 application)
+2025-07-29 13:29:42.645 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7261/api/Test/unhandled-error - 500 0 null 8408.1957ms
+2025-07-29 13:42:44.082 +05:30 [INF] Executed DbCommand (26ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Items] AS [i]
+2025-07-29 13:42:44.276 +05:30 [INF] User profile is available. Using 'C:\Users\Aditya.Singh7\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-07-29 13:42:44.499 +05:30 [INF] Now listening on: https://localhost:7261
+2025-07-29 13:42:44.499 +05:30 [INF] Now listening on: http://localhost:5281
+2025-07-29 13:42:44.604 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-07-29 13:42:44.605 +05:30 [INF] Hosting environment: Development
+2025-07-29 13:42:44.605 +05:30 [INF] Content root path: C:\Users\Aditya.Singh7\Desktop\New_Assignment\backendNew\backendNew
+2025-07-29 13:42:45.664 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7261/swagger/index.html - null null
+2025-07-29 13:42:46.066 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7261/swagger/index.html - 200 null text/html;charset=utf-8 410.3552ms
+2025-07-29 13:42:46.291 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7261/_framework/aspnetcore-browser-refresh.js - null null
+2025-07-29 13:42:46.304 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7261/_framework/aspnetcore-browser-refresh.js - 200 13772 application/javascript; charset=utf-8 12.7761ms
+2025-07-29 13:42:46.538 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7261/_vs/browserLink - null null
+2025-07-29 13:42:46.603 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7261/_vs/browserLink - 200 null text/javascript; charset=UTF-8 64.5365ms
+2025-07-29 13:42:46.683 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7261/swagger/v1/swagger.json - null null
+2025-07-29 13:42:46.705 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7261/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 22.4548ms
+2025-07-29 13:44:10.358 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7261/api/User - application/json 98
+2025-07-29 13:44:10.384 +05:30 [INF] CORS policy execution successful.
+2025-07-29 13:44:10.386 +05:30 [INF] CORS policy execution successful.
+2025-07-29 13:44:10.404 +05:30 [INF] Request: POST /api/User | Body: {
+  "id": 0,
+  "name": "string",
+  "email": "string",
+  "password": "string",
+  "role": "string"
+}
+2025-07-29 13:44:10.410 +05:30 [INF] Executing endpoint 'backendNew.Controllers.UserController.CreateUser (backendNew)'
+2025-07-29 13:44:10.460 +05:30 [INF] Route matched with {action = "CreateUser", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateUser(backendNew.Model.User) on controller backendNew.Controllers.UserController (backendNew).
+2025-07-29 13:44:10.535 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+2025-07-29 13:44:10.542 +05:30 [INF] Executed action backendNew.Controllers.UserController.CreateUser (backendNew) in 76.0621ms
+2025-07-29 13:44:10.543 +05:30 [INF] Executed endpoint 'backendNew.Controllers.UserController.CreateUser (backendNew)'
+2025-07-29 13:44:10.543 +05:30 [INF] Response: 400 | Body: Invalid role specified.
+2025-07-29 13:44:10.549 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7261/api/User - 400 null text/plain; charset=utf-8 191.3668ms

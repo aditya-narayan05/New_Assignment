@@ -15,7 +15,9 @@ namespace backendNew.Repository
 
         public async Task<List<Item>> GetItemsAsync()
         {
-            return await _context.Items.ToListAsync();
+            return await _context.Items
+                .AsNoTracking()
+                .ToListAsync();
         }
 
         public async Task<Item> AddItemAsync(Item item)
@@ -26,13 +28,20 @@ namespace backendNew.Repository
         }
 
         public async Task<bool> DeleteItemAsync(int id)
-        {
-            var item = await _context.Items.FindAsync(id);
-            if (item == null) return false;
+        {       //removed findasync()
+            var item = new Item { Id = id }; // no need to fetch full entity , places a minimal placeholder for deletion
+            _context.Items.Attach(item);     // attach a stub
+            _context.Items.Remove(item);  //Stub Delete Just tells EF: “Hey, pretend this entity exists and remove it by key.”
 
-            _context.Items.Remove(item);
-            await _context.SaveChangesAsync();
-            return true;
+            try
+            {
+                await _context.SaveChangesAsync();
+                return true;
+            }
+            catch (DbUpdateConcurrencyException)
+            {
+                return false; // item might not exist
+            }
         }
     }
 }

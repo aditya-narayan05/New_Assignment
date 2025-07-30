@@ -4,7 +4,8 @@ using BCrypt.Net;
 using backendNew.DataAccessLayer;
 using backendNew.Model;
 using Microsoft.EntityFrameworkCore;
-
+using EFCore = Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions;
+using EFCoreExtensions = Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions;
 namespace backendNew.Repository
 {
     public class UserRepo : IUser
@@ -49,21 +50,43 @@ namespace backendNew.Repository
             return true;
         }
 
+        //public async Task<List<User>> GetUsersAsync()
+        //{
+        //    var users = await appDbContext.Users.ToListAsync();
+
+        //    var safeUsers = users.Select(u => new User
+        //    {
+        //        Id = u.Id,
+        //        Name = u.Name,
+        //        Email = u.Email,
+        //        Role = u.Role
+
+        //    }).ToList();
+
+        //    return safeUsers;
+        //}
         public async Task<List<User>> GetUsersAsync()
         {
-            var users = await appDbContext.Users.ToListAsync();
-
-            var safeUsers = users.Select(u => new User
-            {
-                Id = u.Id,
-                Name = u.Name,
-                Email = u.Email,
-                Role = u.Role
-
-            }).ToList();
-
-            return safeUsers;
+            return await EFCoreExtensions.AsNoTracking(appDbContext.Users).ToListAsync();
+            
         }
+
+        //public async Task<List<User>> GetUsersAsync()
+        //{
+        //    var safeUsers = await EFCore.AsNoTracking(appDbContext.Users)
+        //        .Select(u => new User
+        //        {
+        //            Id = u.Id,
+        //            Name = u.Name,
+        //            Email = u.Email,
+        //            Role = u.Role
+        //        })
+        //        .ToListAsync();
+
+        //    return safeUsers;
+        //}
+
+
         //        public async Task<User> UpdateUserAsync(User user)
         //        {
         //            var existingUser = await appDbContext.Users.FindAsync(user.Id);

@@ -58,6 +58,68 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "backendNew.Controllers.TestController",
+    "Method": "Create",
+    "RelativePath": "api/Test/create",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "backendNew.Model.TestModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "backendNew.Controllers.TestController",
+    "Method": "HandledException",
+    "RelativePath": "api/Test/handled-error",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "backendNew.Controllers.TestController",
+    "Method": "Success",
+    "RelativePath": "api/Test/success",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "backendNew.Controllers.TestController",
+    "Method": "UnhandledException",
+    "RelativePath": "api/Test/unhandled-error",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "backendNew.Controllers.TestController",
+    "Method": "ValidationError",
+    "RelativePath": "api/Test/validation-error",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "required",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "backendNew.Controllers.UserController",
     "Method": "CreateUser",
     "RelativePath": "api/User",

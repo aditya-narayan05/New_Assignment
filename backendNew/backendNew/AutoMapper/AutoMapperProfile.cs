@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using backendNew.Dtos;
 using backendNew.Model;
+using backendNew.Repository;
 
 namespace backendNew.AutoMapper
 {
@@ -8,7 +9,8 @@ namespace backendNew.AutoMapper
     {
         public AutoMapperProfile()
         {
-            CreateMap<User, LoginDTO>();
+            CreateMap<User, LoginDTO>().ReverseMap();
+            CreateMap<UserRepo, UserDto>().ReverseMap();
         }
     }
 }

@@ -38,8 +38,10 @@ namespace backendNew.Controllers
         public async Task<IActionResult> DeleteItem(int id)
         {
             var result = await _itemRepo.DeleteItemAsync(id);
-            if (!result) return NotFound();
-            return NoContent();
+            if (!result)
+                return NotFound(new { message = $"Item with ID {id} not found." });
+
+            return Ok(new { message = $"Item with ID {id} deleted successfully." });
         }
     }
 }
